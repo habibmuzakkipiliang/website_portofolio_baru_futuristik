@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Habib Muzakki Piliang | Anak 12 Agama | Tech Enthusiast & Developer</title>
+    <meta name="description" content="Portfolio Resmi Habib Muzakki Piliang - Siswa MAN 2 Kota Serang, Kelas 12 Agama, Finalis OSN-K Informatika 2025, Novelis, dan Full Stack Developer Enthusiast.">
+    <meta name="keywords" content="Habib Muzakki Piliang, Anak 12 Agama, Habib Muzakki, habib muzakki piliang, habib muzakki, MAN 2 Kota Serang, Ascendria, OSN Informatika 2025, Web Developer Serang, Suku Piliang">
+    <meta name="author" content="Habib Muzakki Piliang">
+    <link rel="canonical" href="https://habibmuzakkipiliang.github.io/website_portofolio/">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-glow: #00f2ff;
+            --secondary-glow: #7000ff;
+            --bg-dark: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff !important;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 2px;
+            color: #ffffff !important;
+        }
+
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Background Nebula Effect */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(112, 0, 255, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-glow) !important;
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 30px;
+            border: 3px solid var(--primary-glow);
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+
+        .glitch-text {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, var(--primary-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Cards & Containers */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary-glow);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Tech Stack Badges */
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--primary-glow);
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            border-left: 2px solid var(--secondary-glow);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--secondary-glow);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--secondary-glow);
+        }
+
+        /* Table Custom */
+        .table {
+            color: #fff !important;
+            border-color: var(--border-glass);
+        }
+
+        /* Social Icons */
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--primary-glow);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid var(--border-glass);
+            margin-top: 100px;
+        }
+
+        .oshis-list span {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(255, 105, 180, 0.2);
+            border: 1px solid #ff69b4;
+            border-radius: 5px;
+            margin: 3px;
+            font-size: 0.8rem;
+        }
+
+        .btn-futuristic {
+            background: transparent;
+            border: 2px solid var(--primary-glow);
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+        .btn-futuristic:hover {
+            background: var(--primary-glow);
+            color: #000;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">HM <span style="color:var(--primary-glow)">PORTFOLIO</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tech">Tech Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengalaman">Kepanitiaan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#karya">Karya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#motivasi">Motivasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section container">
+        <img src="https://habibmuzakkipiliang.github.io/website_portofolio/Leonardo_Phoenix_Design_a_cuttingedge_logo_for_HM_that_embodie_0.jpg" alt="Habib Muzakki Piliang Profile" class="profile-img">
+        <p class="code-font text-info mb-0">console.log ("Halo Dunia!");</p>
+        <h1 class="glitch-text">HABIB MUZAKKI PILIANG</h1>
+        <p class="lead text-light">Siswa MAN 2 Kota Serang | Angkatan 34 ASCENDRIA | Tech Enthusiast</p>
+        <p class="px-md-5">Siswa aktif Kelas 12 Agama (Anak 12 Agama) yang passionate dalam dunia Informatika dan IPS. Finalis OSN-K Informatika 2025, Novelis, dan Developer.</p>
+        <div class="mt-4">
+            <a href="#kontak" class="btn btn-futuristic">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <section id="tentang" class="py-5 container">
+        <h2 class="text-center mb-5 border-bottom pb-3">/ TENTANG SAYA</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="glass-card">
+                    <h3 class="h5 text-info">Siapa Saya?</h3>
+                    <p>Halo! Saya <strong>Habib Muzakki</strong>, siswa MAN 2 Kota Serang angkatan ke-34 <strong>ASCENDRIA</strong>. Saya adalah individu Gen Z yang adaptif, antusias terhadap teknologi, dan menjunjung tinggi nilai budaya Minangkabau (Suku Piliang).</p>
+                    <p>Tahun 2026 ini, saya menjalani status sebagai siswa PP (Pulang-Pergi) setelah sebelumnya 2 tahun menimba ilmu di asrama (boarding school).</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="glass-card">
+                    <h3 class="h5 text-info">Fokus Utama</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check2-circle text-primary"></i> OSN-K Informatika 2025 (Finalis)</li>
+                        <li><i class="bi bi-pencil-square text-primary"></i> Novelis Wattpad & Blogger</li>
+                        <li><i class="bi bi-code-slash text-primary"></i> Pemula Full Stack Developer</li>
+                        <li><i class="bi bi-camera-reels text-primary"></i> Media & Dokumentasi Visual</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil" class="py-5 bg-black bg-opacity-50">
+        <div class="container">
+            <h2 class="text-center mb-5">/ PROFIL LENGKAP</h2>
+            <div class="glass-card">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Kategori</th>
+                                <th>Detail Informasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Instansi</td><td>MAN 2 Kota Serang</td></tr>
+                            <tr><td>Kelas</td><td>12 Agama (Angkatan 2026)</td></tr>
+                            <tr><td>Organisasi</td><td>Angkatan 34 ASCENDRIA</td></tr>
+                            <tr><td>Pencapaian</td><td>OSN-S Lolos | OSN-K Informatika 2025</td></tr>
+                            <tr><td>Status 2026</td><td>Siswa PP (Non-Boarding)</td></tr>
+                            <tr><td>Etnis</td><td>Minangkabau (Suku Piliang)</td></tr>
+                            <tr><td>Keahlian</td><td>Front-End, Python, JavaScript, Kepanitiaan</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-5 container">
+        <h2 class="text-center mb-5">/ TECH STACK <span class="text-info">&lt; &gt;</span></h2>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div class="glass-card mb-4">
+                    <h4 class="mb-4">Core Tech (Full Stack)</h4>
+                    <div class="tech-badge">HTML5</div>
+                    <div class="tech-badge">CSS3</div>
+                    <div class="tech-badge">Bootstrap Modern</div>
+                    <div class="tech-badge">JavaScript (80% Fundamental)</div>
+                    <div class="tech-badge">Python (85% Fundamental)</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="glass-card">
+                    <h4 class="mb-4">Logika & Kompetisi</h4>
+                    <div class="tech-badge">C++ Dasar</div>
+                    <div class="tech-badge">Algoritma OSN</div>
+                    <div class="tech-badge">Problem Solving</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pengalaman" class="py-5 container">
+        <h2 class="text-center mb-5">/ PENGALAMAN ORGANISASI</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="glass-card">
+                    <h4 class="text-info border-bottom pb-2">MASTASA (Masa Ta'aruf)</h4>
+                    <div class="timeline-item">
+                        <h6>MASTASA 2024 (Kelas 11 Agama)</h6>
+                        <p class="small">Peran: Panitia Kesdok (Kestari & Dokumentasi). Mengabadikan momen santri baru.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h6>MASTASA 2025 (Kelas 12 Agama)</h6>
+                        <p class="small">Peran: Panitia Kesdok. Dokumentasi visual penuh untuk orientasi terstruktur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="glass-card">
+                    <h4 class="text-info border-bottom pb-2">ABG (Arena Boarding Gembira)</h4>
+                    <div class="timeline-item">
+                        <h6>ABG 2024 (Kelas 10 Agama)</h6>
+                        <p class="small">Peserta Folksong & Panitia Logistik Peralatan.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h6>ABG 2025 (Kelas 11 Agama)</h6>
+                        <p class="small">Panitia Media & Fashion. Dokumentasi & Pengatur Dresscode Panitia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="motivasi" class="py-5 bg-black">
+        <div class="container text-center">
+            <h2 class="mb-5">/ INSIGHT & MOTIVASI</h2>
+            <div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote">
+                            <p>"Teknologi akan terus berubah, tapi keingintahuan dan semangat belajarmu adalah senjata utama."</p>
+                            <footer class="blockquote-footer text-info">Sundar Pichai</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p>"Coding bukan soal siapa yang paling cepat, tapi siapa yang paling sabar dan teliti."</p>
+                            <footer class="blockquote-footer text-info">Anonim</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p>"Portofolio adalah bukti. Bukan ijazahmu, tapi hasil kerjamu yang akan berbicara."</p>
+                            <footer class="blockquote-footer text-info">Anonim</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p>"Logika akan membawa kamu dari A ke B, tetapi imajinasi bisa membawa kamu ke mana saja."</p>
+                            <footer class="blockquote-footer text-info">Albert Einstein</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 container text-center">
+        <h4 class="mb-4 text-info">IDOL & OSHI FAVORIT</h4>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <p>Grup Favorit: <strong>JKT48 | AKB48 | Rain Tree</strong></p>
+            </div>
+            <div class="col-12 oshis-list">
+                <span>Fritzy JKT48</span> <span>Olla JKT48</span> <span>Christy JKT48</span> <span>Marsha JKT48</span> 
+                <span>Freya JKT48</span> <span>Jessi JKT48</span> <span>Muthe JKT48</span> <span>Eli JKT48</span> 
+                <span>Fiony JKT48</span> <span>Mikaela JKT48</span> <span>Michie JKT48</span> 
+                <span>Yui Oguri (AKB48)</span> <span>Endo Rino (Rain Tree)</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-5 container text-center">
+        <h2 class="mb-5">/ CONNECT WITH ME</h2>
+        <div class="glass-card py-5">
+            <h5 class="mb-4">Email: habibmuzakki03@gmail.com</h5>
+            <div class="d-flex flex-wrap justify-content-center">
+                <a href="https://github.com/habibmuzakkipiliang" target="_blank" class="social-btn"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/habib-muzakki-piliang-15978b315" target="_blank" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/habib_muzakki_piliang/" target="_blank" class="social-btn"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@habib_muzakki_piliang22" target="_blank" class="social-btn"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.wattpad.com/user/habib_muzakki" target="_blank" class="social-btn"><i class="bi bi-book"></i></a>
+                <a href="https://habibmuzakkipiliang.blogspot.com/" target="_blank" class="social-btn"><i class="bi bi-browser-chrome"></i></a>
+                <a href="https://www.kompasiana.com/habibmuzakki3305" target="_blank" class="social-btn"><i class="bi bi-pen"></i></a>
+                <a href="https://www.threads.com/@habib_muzakki_piliang" target="_blank" class="social-btn"><i class="bi bi-threads"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-secondary">
+        <div class="container">
+            <p class="mb-1 text-white">Copyright &copy; 2026 <strong>Habib Muzakki Piliang</strong>. All rights reserved.</p>
+            <p class="small text-white-50">Dibuat dengan semangat IT & Seni Digital - MAN 2 Kota Serang</p>
+            <p class="small code-font text-info">#Ascendria34 #Anak12Agama #TechEnthusiast</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
